@@ -1,4 +1,77 @@
 # Web API using lumen 5.3 php 5.6
 
 
+composer create-project --prefer-dist laravel/lumen pesan-makanan 5.3
 
+php -S localhost:8090 -t public
+
+php artisan make:migration create_users_table --create=users
+
+php artisan migrate
+
+php artisan make:migration create_category_ads_table --create=category_ads
+
+php artisan migrate
+
+php artisan make:migration create_menu_ads_table --create=menu_ads
+
+php artisan migrate
+
+
+
+
+
+http://localhost:8090/register
+http://localhost:8090/login
+http://localhost:8090/user/1?api_token=02dc36941caa8a6aa128860111b6dfab00616a91
+
+
+http://localhost:8090/category
+
+
+
+{
+  "success": true,
+  "api_token": "02dc36941caa8a6aa128860111b6dfab00616a91",
+  "message": {
+    "id": 1,
+    "username": "raden",
+    "email": "raden@gmail.com",
+    "remember_token": null,
+    "created_at": "2017-03-11 04:06:19",
+    "updated_at": "2017-03-11 04:06:19",
+    "deleted_at": null
+  }
+}
+
+http://localhost:8090/category
+    method  = GET
+    Params  =
+              key
+                - api_token
+              value
+              - 02dc36941caa8a6aa128860111b6dfab00616a91 
+
+http://localhost:8090/category
+    method  = POST
+    Body    = x-www-form-urlencoded
+    Data    =
+              - name
+              - api_token 
+
+
+http://localhost:8090/category/update/3
+    method  = POST
+    Body    = x-www-form-urlencoded
+    Data    =
+              - name
+              - api_token 
+
+
+http://localhost:8090/category/delete/1?api_token=02dc36941caa8a6aa128860111b6dfab00616a91
+    method  = GET
+    Params  =
+              key
+                - api_token
+              value
+              - 02dc36941caa8a6aa128860111b6dfab00616a91 
