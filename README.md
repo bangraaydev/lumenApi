@@ -3,10 +3,10 @@
 
 > **Note:**
 
-> - use composer install after you pull the repository
+> - use "composer install" after you pull the repository
 > - add .env file into root directory
 > - add new database (based on env Database name)
-> - use php artisan migrate
+> - use "php artisan migrate"
 > - run the repository with localhost (php localhost -S -t public)
 
 
@@ -21,8 +21,6 @@ php artisan make:migration create_category_ads_table --create=category_ads
 php artisan migrate
 php artisan make:migration create_menu_ads_table --create=menu_ads
 php artisan migrate
-
-
 
 
 
