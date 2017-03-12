@@ -1,13 +1,13 @@
 # Web API using lumen 5.3 php 5.6
 
 
-Note :
-1. use composer install after you pull the repository
-2. add .env file into root directory
-3. add new database (based on env Database name)
-4. use php artisan migrate
-5. run the repository with localhost (php localhost -S -t public)
+> **Note:**
 
+> - use composer install after you pull the repository
+> - add .env file into root directory
+> - add new database (based on env Database name)
+> - use php artisan migrate
+> - run the repository with localhost (php localhost -S -t public)
 
 
 ```
