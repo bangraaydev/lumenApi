@@ -52,7 +52,7 @@ class MenuAdsController extends Controller
         'price' => $request->input('price'),
         'description' => $request->input('description'),
         'picture' => $request->input('picture'),
-        'no_meja' => $request->input('no_hp'),
+        'no_meja' => $request->input('no_meja'),
         'sold' => false,
         'published'=> true
       ]);
@@ -85,17 +85,18 @@ class MenuAdsController extends Controller
     }
 
     /**
-     * Update data MenuAds by ud
+     * Update data MenuAds by id
      * Url : /menu_ads/udpate/{id}
      */
     public function update(Request $request, $id)
     {
-      if ($request->has('name')) {
+      if ($request->has('title')) {
           $menu_ads = MenuAds::find($id);
-          $menu_ads->name = $request->input('name');
+          $menu_ads->title = $request->input('title');
+          $menu_ads->description = $request->input('description');
           if ($menu_ads->save()) {
               $res['success'] = true;
-              $res['result'] = 'Success update '.$request->input('name');
+              $res['result'] = 'Success update '.$request->input('title');
 
               return response($res);
           }

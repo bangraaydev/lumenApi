@@ -28,3 +28,11 @@ $app->get('/category/{id}', 'CategoryAdsController@read');
 $app->delete('/category/{id}', 'CategoryAdsController@delete');
 $app->post('/category', 'CategoryAdsController@create');
 $app->post('/category/update/{id}', 'CategoryAdsController@update');
+
+
+/* Route menu ads */
+$app->get('/menu_ads', 'MenuAdsController@index');
+$app->get('/menu_ads/{id}', 'MenuAdsController@read');
+$app->get('/menu_ads/delete/{id}', 'MenuAdsController@delete');
+$app->post('/menu_ads/create', 'MenuAdsController@create');
+$app->post('/menu_ads/update/{id}', 'MenuAdsController@update');
